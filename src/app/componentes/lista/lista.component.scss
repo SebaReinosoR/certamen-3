@@ -1,0 +1,55 @@
+
+
+button{
+    align-self:left;
+    text-align: left;
+    background:transparent;
+    margin:0 1rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size: 1.2vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style:oblique;
+    letter-spacing:1px;
+    outline:none;
+    height: 3vw;
+    width: 20vw;
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    &.lined.red{
+        background-color: rgba(255, 0, 0, 0.856);
+    }
+    &.lined.green{
+        background-color: rgb(30, 255, 0);
+    }
+    &.lined.yellow{
+        background-color: rgb(213, 250, 4);
+    }
+}
+span{
+    position:absolute;
+    right: -5.4vw;
+}
+div{
+    display: flex;
+    position: relative;
+    left: -6.5vw;
+    margin-left: 10vw;
+    flex-wrap: wrap;
+}
+li{
+   
+    margin-top: 4vh;
+    list-style: none;
+    padding: 0.3vw;
+    text-align: left;
+    width: 15vw;
+    height: 2.2vw;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+}

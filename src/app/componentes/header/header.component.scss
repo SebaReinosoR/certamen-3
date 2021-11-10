@@ -1,0 +1,65 @@
+/* Círculos de colores numerados */
+
+
+span.red {
+    background: rgb(153, 25, 25);
+     border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: rgb(153, 25, 25);
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  
+span.green {
+    background: #77c03b;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #77c03b;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  
+  span.yellow {
+    background:rgb(201, 201, 56);
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: rgb(201, 201, 56);
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+ul li{
+  list-style-type: none;
+}
+
+#botones-colores{
+  position: relative;
+  display: flex;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  margin-bottom: 1%;
+}
+h2{
+  font-size:medium ;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-left: 50%;
+}

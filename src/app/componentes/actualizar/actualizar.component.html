@@ -1,0 +1,31 @@
+<div class="container" >
+    <form [formGroup]="Agregar" (ngSubmit)="Actualizar()">
+        <ul>
+            <li>
+                <label for="titulo" class= "form-label" class="mt-3" >Titulo</label>
+                <input id="titulo"type="text" class="form-control" formControlName="titulo" [(ngModel)]="text"> 
+                <div *ngIf="Agregar.controls['titulo'].invalid && (Agregar.controls['titulo'].dirty || Agregar.controls['titulo'].touched)"  class="alert alert-danger" > 
+                    Campo requerido
+                </div>
+            </li>
+            <li>
+                <label for="Estado" class="form-label">Estado</label>
+                <select class="form-select" id="Estado" [(ngModel)]="numero" formControlName="Estado">
+                    <option selected>Select</option>
+                    <option value="1">Iniciado</option>
+                    <option value="2">En Proceso</option>
+                    <option value="3">Terminada</option>
+                </select>
+                <div *ngIf="Agregar.controls['Estado'].invalid && (Agregar.controls['Estado'].dirty || Agregar.controls['Estado'].touched)"  class="alert alert-danger" > 
+                    Campo requerido
+                </div>
+            </li>
+            <li id="botones">
+                <button class="btn btn-success m-4" [disabled]="!Agregar.valid" type="submit">Actualizar</button>
+                <button class=" btn btn-primary m-4"  type="button" [routerLink]="['/lista']" routerLinkActive="router-link-desactive" > --Volver--</button>
+            </li>
+        </ul>
+    </form>
+</div>
+
+

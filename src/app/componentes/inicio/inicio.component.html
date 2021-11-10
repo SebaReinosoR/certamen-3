@@ -1,0 +1,31 @@
+
+<div class="container" >
+    <form [formGroup]="inicioF"(ngSubmit)="onSubmit()">
+        <ul>
+            <li>
+                <label for="Titulo" class="form-label">Titulo</label>
+                <input type="text"  class="form-control" id="Titulo" [(ngModel)]="text" formControlName="Titulo">
+                <div *ngIf="inicioF.controls['Titulo'].invalid && (inicioF.controls['Titulo'].dirty || inicioF.controls['Titulo'].touched)"  class="alert alert-danger" > 
+                    Campo requerido
+                </div>   
+            </li>
+            <li>
+                <label for="Estado" class="form-label">Estado</label>
+                <select id="select" class="form-select" aria-label="Default select example" id="Estado" formControlName="Estado" [(ngModel)]="numero">
+                    <option selected>Select</option>
+                    <option value="1">Iniciado</option>
+                    <option value="2">En Proceso</option>
+                    <option value="3">Terminada</option>
+                </select>
+                <div *ngIf="inicioF.controls['Estado'].invalid && (inicioF.controls['Estado'].dirty || inicioF.controls['Estado'].touched)"  class="alert alert-danger" > 
+                    Campo requerido
+                </div>   
+            </li>
+            <li id="botones">
+                <button  class="btn btn-primary m-3" type="reset" >Cancelar</button>
+                <button  class="btn btn-success m-3" type="submit" [disabled]="!inicioF.valid"  >Crear</button>
+                <button  class="btn btn-success m-3" type="button"[routerLink]="['/lista']" routerLinkActive="router-link-active">- -Lista- -</button>
+            </li>
+        </ul>
+    </form>
+</div>
